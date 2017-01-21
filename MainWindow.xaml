@@ -1,0 +1,35 @@
+﻿<Window x:Class="MiniaturaVideo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiniaturaVideo"
+        mc:Ignorable="d"
+        Title="Miniatura de Vídeo" Width="610" Height="730">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Button Name="AbrirVideoButton" Content=" Abrir vídeo... " Click="AbrirVideoButton_Click"  Margin="10" />
+        <Border Name="MidiaPlayerBorder" Grid.Row="1" HorizontalAlignment="Center" Width="576" Height="324"/>
+        <Button Name="PausarVideoButton" Content=" Pausar " Grid.Row="2" Click="PausarVideoButton_Click" Margin="10,0" />
+        <TextBlock Name="InfosMidiaTextBlock" Grid.Row="3" HorizontalAlignment="Center" Margin="10" />
+        <Button Name="ObterMiniaturaButton" Content=" Obter Miniatura " Grid.Row="4" Click="ObterMiniaturaButton_Click" IsEnabled="False" Margin="10" />
+        <Grid Width="194" Height="110" Grid.Row="5" Margin="10">
+            <Border Background="Green" BorderBrush="Red" BorderThickness="1" Width="194" Height="110" />
+            <Image Name="MiniaturaImage" Stretch="None" Width="192" Height="108" />
+        </Grid>
+        <TextBlock Grid.Row="6" Margin="10,0">
+            Criado por Marcio Maciel<LineBreak/>
+            - https://www.linkedin.com/in/marcioqmaciel/<LineBreak />
+            - https://www.facebook.com/marcioqmaciel<LineBreak />
+            - https://twitter.com/marcioQmaciel
+        </TextBlock>
+    </Grid>
+</Window>
